@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url(/images/background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    opacity: 0.03;
+    user-select: none;
+}
+
+.icon {
+    user-select: none;
+    width: 2rem;
+    height: 2rem;
+}
+
+.container {
+    width: 100%;
+    min-height: 80vh;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 30rem;
+    margin: 6rem auto 12rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(85, 85, 85, 0.404);
+    backdrop-filter: blur(5px);
+    border: 0.1px solid rgba(255, 255, 255, 0.308);
+}
+
+.todo-app h2 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    background-color: #ffffffc5;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 1rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #6C63FF;
+    border-radius: 2rem;
+    font-weight: 700;
+    color: aliceblue;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 2rem 1rem 2rem 3rem;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #ffffff;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    background-image: url(../images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 1.7rem;
+    left: 0.6rem;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #f3f3f3;
+    left: 0.4;
+}
+
+ul li.checked::before {
+    background-image: url(../images/checked.png);
+    width: 2rem;
+    height: 2rem;
+}
+
+ul li span {
+    position: absolute;
+    right: 0.2rem;
+    top: 1.8rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-weight: normal;
+    color: #bfbfc9;
+}
+
+ul li span:hover {
+    color: #ffffff;
+    background-color: #6b63ffb2;
+    border-radius: 50%;
+}
